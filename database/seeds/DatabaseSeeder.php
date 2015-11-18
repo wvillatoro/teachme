@@ -22,9 +22,10 @@ class DatabaseSeeder extends Seeder {
 			'password_resets'
 			));
 			$this->call('UserTableSeeder');
+			$this->call('TicketTableSeeder');
 	}
 	
-	private function truncateTables(array $tables) 
+		private function truncateTables(array $tables) 
 	{
 	
 		$this->checkForeingKeys(false);
