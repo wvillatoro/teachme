@@ -20,14 +20,7 @@ class TicketTableSeeder extends BaseSeeder
             //    'user_id'   => $this->createFrom('UserTableSeeder')->id
             ];
     }
-    
-    public function run()
-    {
-        
-        $this->createMultiple(50);
-        
-    }
-    
+
 }
 
 

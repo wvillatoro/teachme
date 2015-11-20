@@ -8,7 +8,15 @@ use Illuminate\Database\Eloquent\Collection;
 
 abstract class BaseSeeder extends Seeder
 {
+    protected $total = 50;
     protected static $pool = array();
+    
+    public function run()
+    {
+        $this->createMultiple($this->total);
+        
+    }
+    
     
     
     protected function createMultiple($total, array $customValues = array()) 
@@ -72,8 +80,6 @@ abstract class BaseSeeder extends Seeder
     {
         return isset (static::$pool[$class]);
     }
-    
-    
     
 }
 
